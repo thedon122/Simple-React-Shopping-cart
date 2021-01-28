@@ -79,6 +79,11 @@ const App = () => {
           removeFromCart={handleRemoveFromCart}
         />
       </Drawer>
+      <StyledButton onClick={() => setCartOpen(true)}>
+        <Badge badgeContent={getTotalItems(cartItems)} color='error'>
+          <AddShoppingCartIcon />
+        </Badge>
+        </StyledButton>
   );
 };
 

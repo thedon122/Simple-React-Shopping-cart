@@ -69,3 +69,17 @@ const App = () => {
 
   if (isLoading) return <LinearProgress />;
   if (error) return <div>Something went wrong ...</div>;
+
+  return (
+    <Wrapper>
+      <Drawer anchor='right' open={cartOpen} onClose={() => setCartOpen(false)}>
+        <Cart
+          cartItems={cartItems}
+          addToCart={handleAddToCart}
+          removeFromCart={handleRemoveFromCart}
+        />
+      </Drawer>
+  );
+};
+
+export default App;
